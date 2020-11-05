@@ -1,0 +1,84 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+  <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form>
+        <fieldset>
+          <legend class="text-center">Valid information is required to add the Feature. <span class="req"><small>
+                                required *</small></span></legend>
+          <div class="form-group">
+            <label for="title"><span class="req">* </span> Title : </label>
+            <input class="form-control" type="text" [(ngModel)]="feature.title" name="title"
+                   placeholder="Enter Title " required/>
+            <div class="status" id="title"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="desc"><span class="req">* </span> Description : </label>
+            <input class="form-control" type="text" [(ngModel)]="feature.desc" name="desc"
+                   placeholder="Description" required/>
+            <div class="status" id="desc"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientList"><span class="req">* </span> Client List : </label>
+            <select [(value)]="feature.clientList" [(ngModel)]="feature.clientList" name="clientList" style="width:20%;font-size: 14px">
+              <option value="Client A">Client A</option>
+              <option value="Client B">Client B</option>
+              <option value="Client C">Client C</option>
+            </select>
+            <div class="status" id="clientList"></div>
+          </div>
+
+          <div>
+
+            <div class="form-group">
+              <label for="priority"><span class="req">* </span> Client Priority : </label>
+              <select [(value)]="feature.priority" [(ngModel)]="feature.priority" name="priority" style="width:10%;font-size: 14px">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+              </select>
+              <div class="status" id="priority"></div>
+            </div>
+
+            <div>
+              <label for="targetDate"> <span class="req">* </span> Target Date : </label>
+              <input class="form-control" [(ngModel)]="feature.targetDate" style="width:30%;font-size: 14px" name="targetDate" type="date" />
+              <div class="status" id="targetDate"></div>
+            </div>
+
+            <div></div>
+            <div class="form-group">
+              <label for="productArea">  <span class="req">* </span> Product Area : </label>
+              <select [(value)]="feature.productArea" [(ngModel)]="feature.productArea" name="&quot;parea">
+                <option value="Policies">Policies</option>
+                <option value="Claims">Claims</option>
+                <option value="Reports">Reports</option>
+              </select>
+              <div class="status" id="productArea"></div>
+            </div>
+
+            <div class="form-group">
+              <input class="btn btn-success" type="submit" name="submit_reg" value="Submit" (click)="submitNow()">
+            </div>
+          </div>
+        </fieldset>
+      </form><!-- ends register form -->
+      <!-- second for to fiter user-->
+    </div><!-- ends col-6 -->
+  </div>
+</div>

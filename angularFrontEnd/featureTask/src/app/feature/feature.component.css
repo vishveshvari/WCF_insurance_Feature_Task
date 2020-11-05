@@ -1,0 +1,24 @@
+
+body{
+   margin-left: 150px;
+   margin-right: 150px;
+   margin-top: 10px;
+   margin-bottom: 100px;
+   background-color: #DBDBFB;
+}
+
+
+h2 {color: #566573;
+  text-align: center;
+    }
+
+div{
+  font-size: 19px;
+      word-spacing: 5px;
+      line-height: 2.5;
+        margin-left: 20px;
+}
+label{
+ font-weight: bold;
+ color: #074580;
+}
